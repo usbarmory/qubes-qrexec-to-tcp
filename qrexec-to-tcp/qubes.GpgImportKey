@@ -1,0 +1,1 @@
+/usr/bin/ssh -T -i /home/user/.ssh/id_rsa_qubes_import gpg@10.0.0.1
