@@ -1,0 +1,4 @@
+Host usbarmory
+  HostName 10.0.0.1
+  User gpg
+  IdentityFile /home/user/.ssh/id_rsa_qubes_ssh

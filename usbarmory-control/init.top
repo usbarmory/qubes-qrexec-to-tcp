@@ -1,0 +1,7 @@
+base:
+  dom0:
+    - usbarmory-control.dom0
+  usbarmory-control:
+    - usbarmory-control.config
+  sys-usb:
+    - usbarmory-control.sys-usb.config

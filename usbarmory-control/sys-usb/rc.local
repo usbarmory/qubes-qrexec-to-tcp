@@ -1,0 +1,4 @@
+#!/bin/sh
+
+ln -s /rw/config/90-usbarmory.rules /etc/udev/rules.d/90-usbarmory.rules
+/usr/bin/udevadm control --reload-rules
