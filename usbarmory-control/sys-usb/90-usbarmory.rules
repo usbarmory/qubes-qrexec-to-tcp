@@ -1,1 +1,1 @@
-SUBSYSTEM=="net", ACTION=="add", RUN+="/usr/sbin/dhclient $name"
+SUBSYSTEM=="net", ACTION=="add", ATTR{address}=="1a:55:89:a2:69:42", RUN+="/usr/sbin/dhclient $name"
