@@ -13,7 +13,7 @@ however any networked device can be used for this setup.
 Qubes Split GPG architecture
 ============================
 
-The following diagram presents the Split GPG implemented in two VM:
+The following diagram presents the Split GPG implemented in two VMs:
 ![Qubes Split GPG](images/split-gpg.svg)
 
 In this setup the following architecture is used:
@@ -62,7 +62,7 @@ Operation
 ```
 [user@usbarmory-control ~]$ ./set-usbarmory-time.sh
 [user@usbarmory-control ~]$ ssh usbarmory
-(usbarmory)$ unlock
+[gpg@usbarmory]$ unlock
 
 [user@qrexec-to-tcp ~]$ ssh 10.0.0.1 FIXME
 [user@work ~]$ export QUBES_GPG_DOMAIN="qrexec-to-tcp"
@@ -70,7 +70,3 @@ Operation
 [user@work ~]$ qubes-gpg-import qubes-master-signing-key.asc
 [user@work ~]$ qubes-gpg-client -k
 ```
-
-TODO
-====
-- udev rule should be bind to specific USB armory mac address
