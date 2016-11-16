@@ -13,13 +13,11 @@ however any networked device can be used for this setup.
 
 The following diagram illustrates the traditional Split GPG architecture,
 implemented with two VMs:
-
 ![Qubes Split GPG](https://cdn.rawgit.com/inversepath/qubes-qrexec-to-tcp/master/images/split-gpg.svg)
 
 The qubes-gpg-server over TCP setup replaces the traditional one with the
 following architecture, which uses two additional VMs (`usbarmory-control`,
 `qrexec-to-tcp`):
-
 ![Qubes Split GPG with USB armory](https://cdn.rawgit.com/inversepath/qubes-qrexec-to-tcp/master/images/qrexec-to-tcp.svg)
 
 # GPG server on the USB armory
@@ -79,21 +77,26 @@ keystore:
 [gpg@usbarmory]$ unlock
 ```
 
-Configure your GPG client VM (e.g. `work`) to use the Split GPG backend, by
-setting the `QUBES_GPG_DOMAIN` variable to `qrexec-to-tcp`:
+Configure your GPG client VM (e.g. `work-email`) to use the Split GPG backend,
+by setting the `QUBES_GPG_DOMAIN` variable to `qrexec-to-tcp`:
 
 ```
-[user@work ~]$ export QUBES_GPG_DOMAIN="qrexec-to-tcp"
+[user@work-email ~]$ export QUBES_GPG_DOMAIN="qrexec-to-tcp"
 ```
 
 It can be tested as follows:
 
 ```
-[user@work ~]$ wget https://keys.qubes-os.org/keys/qubes-master-signing-key.asc
-[user@work ~]$ qubes-gpg-import qubes-master-signing-key.asc
-[user@work ~]$ qubes-gpg-client -k
+[user@work-email ~]$ wget https://keys.qubes-os.org/keys/qubes-master-signing-key.asc
+[user@work-email ~]$ qubes-gpg-import qubes-master-signing-key.asc
+[user@work-email ~]$ qubes-gpg-client -k
 ```
 
 All `qubes-gpg-client` operations should now be performed on the USB armory and
 its LED notify the user of an upcoming operation, with a delay depending on the
 `LED_TIMEOUT` value passed in the USB armory build process.
+
+# Resources
+
+* [Qubes OS Split GPG](https://www.qubes-os.org/doc/split-gpg/)
+* [USB armory buildroot environment](https://github.com/inversepath/usbarmory/tree/master/software/buildroot)
