@@ -14,13 +14,13 @@ however any networked device can be used for this setup.
 The following diagram illustrates the traditional Split GPG architecture,
 implemented with two VMs:
 
-![Qubes Split GPG](https://raw.githubusercontent.com/inversepath/qubes-qrexec-to-tcp/master/images/split-gpg.svg)
+![Qubes Split GPG](https://cdn.rawgit.com/inversepath/qubes-qrexec-to-tcp/master/images/split-gpg.svg)
 
 The qubes-gpg-server over TCP setup replaces the traditional one with the
 following architecture, which uses two additional VMs (`usbarmory-control`,
 `qrexec-to-tcp`):
 
-![Qubes Split GPG with USB armory](https://raw.githubusercontent.com/inversepath/qubes-qrexec-to-tcp/master/images/qrexec-to-tcp.svg)
+![Qubes Split GPG with USB armory](https://cdn.rawgit.com/inversepath/qubes-qrexec-to-tcp/master/images/qrexec-to-tcp.svg)
 
 # GPG server on the USB armory
 
