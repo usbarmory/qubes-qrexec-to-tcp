@@ -92,7 +92,9 @@ by setting the `QUBES_GPG_DOMAIN` variable to `qrexec-to-tcp`:
 [user@work-email ~]$ export QUBES_GPG_DOMAIN="qrexec-to-tcp"
 ```
 
-It can be tested as follows:
+Test correct operation, from GPG client VM, by importing a key and ensuring
+that the import operation host key confirmation prompt matches the previously
+verified USB armory fingerprint:
 
 ```
 [user@work-email ~]$ wget https://keys.qubes-os.org/keys/qubes-master-signing-key.asc
