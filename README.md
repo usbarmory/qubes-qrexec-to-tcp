@@ -66,16 +66,22 @@ illustrated in its specific
 
 ## Operation
 
-Plug in the USB armory, from the `usbarmory-control` VM set its time and
-connect to the device to unlock the encrypted partition holding the GPG
-keystore:
+Only the very first time the USB armory is plugged in after imaging, from the
+`usbarmory-control` VM connect to verify its host key and change default
+`usbarmory` password with your own:
+
+```
+[user@usbarmory-control ~]$ ssh usbarmory
+[gpg@usbarmory]$ change_passphrase
+```
+
+For normal use, after plugging in the USB armory, from the `usbarmory-control`
+VM set its time and connect to the device to unlock the encrypted partition
+holding the GPG keystore:
 
 ```
 [user@usbarmory-control ~]$ ./set-usbarmory-time.sh
 [user@usbarmory-control ~]$ ssh usbarmory
-# only the very first time change default "usbarmory" password to your own
-[gpg@usbarmory]$ change_passphrase
-# unlock the encrypted partition
 [gpg@usbarmory]$ unlock
 ```
 
