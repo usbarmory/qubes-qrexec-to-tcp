@@ -22,6 +22,10 @@ remote device (e.g. `usbarmory-control`) and one responsible for the TCP bridge
 
 ![Qubes Split GPG with USB armory](https://cdn.rawgit.com/inversepath/qubes-qrexec-to-tcp/master/images/qrexec-to-tcp.svg)
 
+*NOTE*: this setup is currently incompatible with configurations that bundle
+UsbVM functionality into 'sys-net' (e.g.
+[sys-net-with-usb.sls](https://github.com/QubesOS/qubes-mgmt-salt-dom0-virtual-machines/blob/master/qvm/sys-net-with-usb.sls))
+
 # GPG server on the USB armory
 
 ## Qubes OS setup
