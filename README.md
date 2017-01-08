@@ -102,7 +102,7 @@ verified USB armory fingerprint:
 
 ```
 [user@work-email ~]$ wget https://keys.qubes-os.org/keys/qubes-master-signing-key.asc
-[user@work-email ~]$ qubes-gpg-import qubes-master-signing-key.asc
+[user@work-email ~]$ qubes-gpg-import-key qubes-master-signing-key.asc
 [user@work-email ~]$ qubes-gpg-client -k
 ```
 
