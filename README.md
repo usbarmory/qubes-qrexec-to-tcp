@@ -5,22 +5,22 @@ support its [Split GPG](https://www.qubes-os.org/doc/split-gpg/) setup using a
 TCP connected qubes-gpg-server.
 
 The scenario is originally created to support Split GPG with the
-[USB armory](https://inversepath.com/usbarmory) device acting as GPG server,
-however any networked device can be used for this setup.
+[USB armory](https://github.com/f-secure-foundry/usbarmory) device acting as
+GPG server, however any networked device can be used for this setup.
 
 
 # Qubes Split GPG architecture
 
 The following diagram illustrates the traditional Split GPG architecture,
 implemented with two VMs:
-![Qubes Split GPG](https://cdn.rawgit.com/inversepath/qubes-qrexec-to-tcp/master/images/split-gpg.svg)
+![Qubes Split GPG](https://cdn.rawgit.com/f-secure-foundry/qubes-qrexec-to-tcp/master/images/split-gpg.svg)
 
 The qubes-gpg-server over TCP setup replaces the traditional one with the
 following architecture which uses two additional VMs, one for controlling the
 remote device (e.g. `usbarmory-control`) and one responsible for the TCP bridge
 (`qrexec-to-tcp`):
 
-![Qubes Split GPG with USB armory](https://cdn.rawgit.com/inversepath/qubes-qrexec-to-tcp/master/images/qrexec-to-tcp.svg)
+![Qubes Split GPG with USB armory](https://cdn.rawgit.com/f-secure-foundry/qubes-qrexec-to-tcp/master/images/qrexec-to-tcp.svg)
 
 *NOTE*: this setup is currently incompatible with configurations that bundle
 UsbVM functionality into 'sys-net' (e.g.
@@ -66,7 +66,7 @@ The public keys can be copied to the VM used to build the USB armory image
 
 The USB armory image configuration and building should be performed as
 illustrated in its specific
-[setup guide](https://github.com/inversepath/usbarmory/blob/master/software/buildroot/README-Qubes_Split_GPG.md).
+[setup guide](https://github.com/f-secure-foundry/usbarmory/blob/master/software/buildroot/README-Qubes_Split_GPG.md).
 
 ## Operation
 
@@ -113,4 +113,4 @@ its LED notify the user of an upcoming operation, with a delay depending on the
 # Resources
 
 * [Qubes OS Split GPG](https://www.qubes-os.org/doc/split-gpg/)
-* [USB armory buildroot environment](https://github.com/inversepath/usbarmory/tree/master/software/buildroot)
+* [USB armory buildroot environment](https://github.com/f-secure-foundry/usbarmory/tree/master/software/buildroot)
