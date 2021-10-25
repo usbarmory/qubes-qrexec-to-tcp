@@ -1,5 +1,11 @@
 # Qubes Split GPG configuration for qubes-gpg-server over TCP
 
+> :warning: this project is longer maintained/developed, the following
+> [TamaGo](https://github.com/f-secure-foundry/tamago) unikernel is
+> recommended to embed similar single-purpose functionality on the USB armory:
+>
+>  * [GoKey](https://github.com/f-secure-foundry/GoKey)
+
 This repository contains [Qubes OS](https://www.qubes-os.org) customizations to
 support its [Split GPG](https://www.qubes-os.org/doc/split-gpg/) setup using a
 TCP connected qubes-gpg-server.
