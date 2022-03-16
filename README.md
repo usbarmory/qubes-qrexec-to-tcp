@@ -1,17 +1,17 @@
 # Qubes Split GPG configuration for qubes-gpg-server over TCP
 
 > :warning: this project is longer maintained/developed, the following
-> [TamaGo](https://github.com/f-secure-foundry/tamago) unikernel is
+> [TamaGo](https://github.com/usbarmory/tamago) unikernel is
 > recommended to embed similar single-purpose functionality on the USB armory:
 >
->  * [GoKey](https://github.com/f-secure-foundry/GoKey)
+>  * [GoKey](https://github.com/usbarmory/GoKey)
 
 This repository contains [Qubes OS](https://www.qubes-os.org) customizations to
 support its [Split GPG](https://www.qubes-os.org/doc/split-gpg/) setup using a
 TCP connected qubes-gpg-server.
 
 The scenario is originally created to support Split GPG with the
-[USB armory](https://github.com/f-secure-foundry/usbarmory) device acting as
+[USB armory](https://github.com/usbarmory/usbarmory) device acting as
 GPG server, however any networked device can be used for this setup.
 
 
@@ -72,7 +72,7 @@ The public keys can be copied to the VM used to build the USB armory image
 
 The USB armory image configuration and building should be performed as
 illustrated in its specific
-[setup guide](https://github.com/f-secure-foundry/usbarmory/blob/master/software/buildroot/README-Qubes_Split_GPG.md).
+[setup guide](https://github.com/usbarmory/usbarmory/blob/master/software/buildroot/README-Qubes_Split_GPG.md).
 
 ## Operation
 
@@ -119,4 +119,4 @@ its LED notify the user of an upcoming operation, with a delay depending on the
 # Resources
 
 * [Qubes OS Split GPG](https://www.qubes-os.org/doc/split-gpg/)
-* [USB armory buildroot environment](https://github.com/f-secure-foundry/usbarmory/tree/master/software/buildroot)
+* [USB armory buildroot environment](https://github.com/usbarmory/usbarmory/tree/master/software/buildroot)
