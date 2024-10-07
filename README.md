@@ -1,6 +1,6 @@
 # Qubes Split GPG configuration for qubes-gpg-server over TCP
 
-> :warning: this project is longer maintained/developed, the following
+> :warning: this project is no longer maintained/developed, the following
 > [TamaGo](https://github.com/usbarmory/tamago) unikernel is
 > recommended to embed similar single-purpose functionality on the USB armory:
 >
