@@ -1,6 +1,7 @@
 # Qubes Split GPG configuration for qubes-gpg-server over TCP
 
-> :warning: this project is no longer maintained/developed, the following
+> [!WARNING]
+> This project is no longer maintained/developed, the following
 > [TamaGo](https://github.com/usbarmory/tamago) unikernel is
 > recommended to embed similar single-purpose functionality on the USB armory:
 >
@@ -19,14 +20,14 @@ GPG server, however any networked device can be used for this setup.
 
 The following diagram illustrates the traditional Split GPG architecture,
 implemented with two VMs:
-![Qubes Split GPG](https://raw.githubusercontent.com/withsecure/qubes-qrexec-to-tcp/master/images/split-gpg.svg?sanitize=true)
+![Qubes Split GPG](https://raw.githubusercontent.com/usbarmory/qubes-qrexec-to-tcp/master/images/split-gpg.svg?sanitize=true)
 
 The qubes-gpg-server over TCP setup replaces the traditional one with the
 following architecture which uses two additional VMs, one for controlling the
 remote device (e.g. `usbarmory-control`) and one responsible for the TCP bridge
 (`qrexec-to-tcp`):
 
-![Qubes Split GPG with USB armory](https://raw.githubusercontent.com/withsecure/qubes-qrexec-to-tcp/master/images/qrexec-to-tcp.svg?sanitize=true)
+![Qubes Split GPG with USB armory](https://raw.githubusercontent.com/usbarmory/qubes-qrexec-to-tcp/master/images/qrexec-to-tcp.svg?sanitize=true)
 
 *NOTE*: this setup is currently incompatible with configurations that bundle
 UsbVM functionality into 'sys-net' (e.g.
